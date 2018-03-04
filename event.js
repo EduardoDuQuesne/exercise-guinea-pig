@@ -1,21 +1,17 @@
 //Print to output target
 function printToOutput(event) {
     let outputTarget = document.getElementById("output-target");
-   //  let content = document.createTextNode(event);
     outputTarget.innerHTML = event;
    }
 
 //Click on sections and display in output target   
 let sectionClick = document.getElementsByClassName("article-section");
-console.log(sectionClick);
-
- for (let i = 0; i < sectionClick.length; i++) {
+for (let i = 0; i < sectionClick.length; i++) {
      sectionClick[i].addEventListener("click", function () {
         printToOutput(`You just clicked the ${event.target.innerHTML}`);
      })    
  } 
-
-    
+   
 //H1 Hover
 let h1Hover = document.getElementById("page-title");
 h1Hover.addEventListener("mouseover", function () {
@@ -40,6 +36,7 @@ colorChange.addEventListener("click", function() {
     let guineaPig = document.getElementById("guinea-pig");
     guineaPig.classList.toggle("add-color");
 })
+
 //Hulkify
 let hulkify = document.getElementById("make-large");
 hulkify.addEventListener("click", function() {
